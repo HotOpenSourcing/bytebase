@@ -50,3 +50,5 @@ scripts/azure-marketplace/*.backup
 # superpowers brainstorm sessions (visual companion mockups)
 .superpowers/
 .gocache/
+config.bat
+node_modules

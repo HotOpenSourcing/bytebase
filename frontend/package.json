@@ -4,7 +4,7 @@
   "packageManager": "pnpm@11.17.0",
   "scripts": {
     "prepare": "sh ./scripts/copy-config-files.sh && node scripts/generate-openapi-index.js",
-    "dev": "export NODE_OPTIONS=--max_old_space_size=8000 && pnpm run prepare && vite --mode dev-local",
+    "dev": "node init && export NODE_OPTIONS=--max_old_space_size=8000 && pnpm run prepare && vite --mode dev-local",
     "release": "export NODE_OPTIONS=--max_old_space_size=8000 && pnpm run prepare && vite build --mode release --outDir=../backend/server/dist --emptyOutDir",
     "release-docker": "export NODE_OPTIONS=--max_old_space_size=8000 && pnpm run prepare && vite build --mode release",
     "release-aws": "export NODE_OPTIONS=--max_old_space_size=8000 && pnpm run prepare && vite build --mode release-aws",
